@@ -1,0 +1,574 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*---cores---*/
+
+:root {
+    --cor--principal--: #459674;
+    --cor--principal-escuro--: #2c7255;
+    --cor--branco-fundo--: #ededee;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor--branco-fundo--);
+}
+
+.container {
+    width: 100%;
+    height: 5000px;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    background-color: var(--cor--branco-fundo--);
+    z-index: 999;
+}
+
+.barra-de-navegacao {
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+.logo h1 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 25px;
+    cursor: context-menu;
+}
+
+.barra-de-navegacao ul {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.barra-de-navegacao li {
+    display: inline-block;
+    margin: 10px;
+    list-style-type: none;
+    transition: 0.4s;
+}
+
+.barra-de-navegacao li:hover {
+    transform: translateY(-2px);
+}
+
+.barra-de-navegacao a {
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.barra-de-navegacao a:hover {
+    color: var(--cor--principal--);
+}
+
+/*----banner----*/
+.banner {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background-color: var(--cor--principal--);
+}
+
+.box_login {
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--cor--branco-fundo--);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.box_login h1 {
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+    cursor: context-menu;
+}
+
+.box_login p{
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#nome {
+    width: 350px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#nome::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#senha {
+    width: 350px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#senha::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.login a {
+    color: black;
+    margin-left: 10px;
+}
+
+.login a:hover{
+    color: red;
+}
+
+.btn-entrar {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn-entrar a {
+    color: white;
+    background-color: var(--cor--principal--);
+    padding: 15px 50px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.4s;
+    font-size: 18px;
+}
+
+.btn-entrar a:hover {
+    background-color: #265f47;
+}
+
+.btn-criar-conta {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.btn-criar-conta a {
+    color: white;
+    background-color: #1bb9b1;
+    padding: 13px 60px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.4s;
+    font-size: 18px;
+}
+
+.btn-criar-conta a:hover {
+    background-color: #127a75;
+}
+
+
+/*----classes----*/
+
+.classes {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+}
+/*=========*/
+.box_efeito-giratorio-guerreiro {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+}
+
+.box_efeito-giratorio-guerreiro::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #c8d417);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box_efeito-giratorio-guerreiro::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, black);
+    animation: rotate 4s linear infinite;
+}
+/*==========*/
+.box_efeito-giratorio-arqueira {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+}
+
+.box_efeito-giratorio-arqueira::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #c7126c);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box_efeito-giratorio-arqueira::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, black);
+    animation: rotate 4s linear infinite;
+}
+/*==========*/
+.box_efeito-giratorio-mago {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+}
+
+.box_efeito-giratorio-mago::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #0b6ebe);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box_efeito-giratorio-mago::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, black);
+    animation: rotate 4s linear infinite;
+}
+/*==========*/
+.box_efeito-giratorio-taoista {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+}
+
+.box_efeito-giratorio-taoista::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #e0aa76);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box_efeito-giratorio-taoista::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, black);
+    animation: rotate 4s linear infinite;
+}
+/*==========*/
+.box_efeito-giratorio-humano {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+}
+
+.box_efeito-giratorio-humano::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #00ff00);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box_efeito-giratorio-humano::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, black);
+    animation: rotate 4s linear infinite;
+}
+/*==========*/
+.box_efeito-giratorio-demonio {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+}
+
+.box_efeito-giratorio-demonio::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #ff0000);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box_efeito-giratorio-demonio::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, black);
+    animation: rotate 4s linear infinite;
+}
+/*==========*/
+.box_efeito-giratorio-anjo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+}
+
+.box_efeito-giratorio-anjo::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #dddddd);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box_efeito-giratorio-anjo::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, black);
+    animation: rotate 4s linear infinite;
+}
+/*==========*/
+.box_efeito-giratorio-deus {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    place-items: center;
+    display: grid;
+}
+
+.box_efeito-giratorio-deus::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #000000);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box_efeito-giratorio-deus::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: conic-gradient(transparent, transparent, transparent, #000000);
+    animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.guerreiro {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.arqueira {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.mago {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.taoista {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.humano {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.demonio {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.anjo {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.deus {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.box_classes {
+    padding: 30px;
+    margin: auto;
+    display: inline-block;
+}
+
+.nome-classe {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: context-menu;
+}
+
+.sobre-classes {
+    width: 70%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.strong-verde {
+    color: var(--cor--principal--);
+}
+
+/*------sobre------*/
+
+.sobre {
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+    background-color: var(--cor--principal--);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.box-sobre {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.box-sobre-a p {
+    font-size: 20px;
+    cursor: context-menu;
+    text-align: center;
+}
+
+.box-sobre-a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*------barra de scrol------*/
+
+::-webkit-scrollbar {
+    background-color: #e1e1e2;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor--principal--);
+    border-radius: 4px;
+}
